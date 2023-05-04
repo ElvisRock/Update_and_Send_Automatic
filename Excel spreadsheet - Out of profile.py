@@ -1,14 +1,15 @@
-#!/usr/bin/env python
-# coding: utf-8
+# Objetivo: Atualizar planilha e enviar por e-mail automática para ganhar tempo
 
-# In[ ]:
-
+# Neste jupyter notebook estou usando o Anaconda, embora possua diversas bibliotecas já incluso é necessário instalar algumas para esta demanda.
+# instale !pip install pyautogui para controlar seu pc
+# instale !pip install pywin32 Para controlar programas no pc, como o outlook, instale 
 
 import pyautogui
 import time
 import pyperclip
 import os
 import webbrowser
+import win32com.client as win32
 
 #Atualizar planilha fora de perfil e enviar por e-mail 
 time.sleep (5)
