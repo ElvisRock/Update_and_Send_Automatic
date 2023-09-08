@@ -1,52 +1,78 @@
-# Objetivo: Atualizar planilha e enviar por e-mail automática para ganhar tempo
+**Objetivo:** Atualizar a planilha do excel e enviar por email 
 
-# Neste jupyter notebook estou usando o Anaconda, embora possua diversas bibliotecas já incluso é necessário instalar algumas para esta demanda.
-# instale !pip install pyautogui para controlar seu pc
-# instale !pip install pywin32 Para controlar programas no pc, como o outlook, instale 
+<font color = 'grey'>Descrição do processo e trabalho feito:</font>
+ 
+ - Todos os dias há uma grande demora na execução da criação da planilha do excel e atrasos no envio por email, onde nela contém diversas informações e são consolidadas em formas de relatórios extremamente importante para área de negócio. São geradas através de Macros VBA e entregues ao gestor.
+ 
+  - O problema inicial é que mesmo tendo muitos códigos para gerar esta planilha automática e enviar para o gestor, há um tempo considerável processando tudo e deve ser feita diáriamente, entregue para o gestor no primeiro horário, resultando em uma pessoa ter que chegar mais cedo, todos os dias de 12 á 20 minutos e executar/rodar as macros e enviar para o gestor, se tudo der certo.
+  
+  - De forma a resolver o problema primeiro até conseguir passar todos os dados para uma ferramenta mais robusta ideal como o Tableau e Power bi, foi desenvolvido este código para atender a necessidade do gestor e evitar que tenha hora extra.
+ 
+ - Há códigos em VBA na planilha usada como objeto principal, onde faz diversos processos de atualizações, como puxar dados de outras planilhas e portal CRM via navegador web, portanto neste script não haverá detalhamento desta parte. Somente a execução da macro vba 'click' usando python e envio por email para o gestor.
 
-import pyautogui
-import time
+ ## Instalações necessárias
+ 
+# Neste script estou usando o anaconda e ao final é salvo em .py
+# embora o jupyter notebook possua diversos pacotes e bibliotecas incluso é necessário instalar algumas para esta mini-tarefa.
+
+!pip install pyautogui    # Para controlar seu pc
+!pip install pywin32      # Para controlar programas no pc como outlook
+
+# Imports
+
+import pyautogui                    # Para controlar o pc 
+import time                         # Tempo de execução específico                    
 import pyperclip
-import os
-import webbrowser
-import win32com.client as win32
+import os                           # Para navegar e interagir com diretórios 
+import webbrowser                   # Para controlar o navegador
+import win32com.client as win32     # Para controlar programs no pc  
 
-#Atualizar planilha fora de perfil e enviar por e-mail 
-time.sleep (5)
-#Condição para a atualização da planilha, página do vetor aberta e logada.
-webbrowser.open_new('https://vetorzkm.movida.com.br/login.php?logout=1')
+
+webbrowser.open_new('https://site')
+
+#Esperar
 time.sleep(3)
+
+# Localização por coordenadas x,y
 pyautogui.moveTo(210,475, duration = 0.25)
 pyautogui.click(210,475, button = 'left', duration = 0.25)
-#Esperar
+
 time.sleep(4)
-#abrir a pasta/planilha excel
+
+# Abrir a pasta/planilha excel
 os.startfile(r"C:\Users\elvis.monteiro\Desktop\Teste para envio fora de perfil\Fora do Perfil - Atualização Diária 2021.xlsb")
-#Esperar
+
 pyautogui.PAUSE=6
-#Clicar no botão e rodar a macro do excel
+
+#Executar macro do excel
 pyautogui.click(62,296)
-#esperar 5 minutos ou 300 segundos
-time.sleep(300)
+
+# Esperar 15 minutos (tempo em segundos)
+time.sleep(900)
+
 #Fechar planilha
 pyautogui.hotkey('alt','f4')
-#Esperar a planilha fechar e salvar automaticamente
+
+#Esperar a planilha fechar e salvar automaticamente(Já com programação para salvar direto por vba)
 time.sleep(5)
 
+## Enviar por email
 
-
-#Enviar e-mail
+# Import
 import win32com.client as win32
 
 #Criar integração com o  outlook
 outlook = win32.Dispatch('outlook.application')
+
 # Criar um email
 email = outlook.CreateItem(0)
+
 #configurar informações de email - email exemplo
 email.To = " emailexemplo1@.com;emailexemplo2@.com.br" 
-email.Subject ="Planilha Fora de Perfil"
+email.Subject ="Assunto"
+
 email.HTMLBody = """
-<p>Olá, Bom dia ! Segue em anexo a planilha Fora de Perfil atualizada 2021.</p>
+<p>Olá, Bom dia ! Segue em anexo a planilha XYZ atualizada 2021.</p>
 
 <p>Att 
 
@@ -60,3 +86,9 @@ email.Attachments.Add(anexo)
 email.Send ()
 print ("email enviado")
 
+## Start da Execução
+  1 - Este Script é feito no Jupiter Notebook e salvo em formato .py  
+  2 - É usado o agendador de tarefas para iniciar o processo automático dentro do horário estipulado no computador.(Talvez seja necessário acesso root da máquina)
+  
+## Fim
+    
