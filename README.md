@@ -92,8 +92,15 @@ print ("email enviado")
 ```
 # Start da Execução
 
-    1 - Este Script é feito no Jupiter Notebook e salvo em formato .py
+    1 - Este Script é feito no Jupiter Notebook e salvo em formato .py. Sistema Operacional usado Windows.
     
-    2 - É usado o agendador de tarefas para iniciar o processo automático dentro do horário estipulado no computador.(Talvez seja necessário acesso root da máquina)
+    2 - É usado o agendador de tarefas para iniciar o processo automático dentro do horário estipulado no computador.(Talvez seja necessário acesso root da máquina).
+
+    3 - Basta criar uma basta no agendador de tarefas nomeando a tarefa e subindo o script .py.
 
 # Fim
+
+# Links e Referências
+
+https://pyautogui.readthedocs.io/en/latest/
+
