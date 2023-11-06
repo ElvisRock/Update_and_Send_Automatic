@@ -1,5 +1,6 @@
 > ## **Objetivo:** Atualizar a planilha do excel e enviar por email 
 _____________________________________________________________
+![](Python-Excel.jpeg)
 <font color = 'grey'>Descrição do processo e trabalho feito:</font>
  
  - Todos os dias há uma grande demora na execução da criação da planilha do excel e atrasos no envio por email, onde nela contém diversas informações e são consolidadas em formas de relatórios extremamente importante para área de negócio. São geradas através de Macros VBA e entregues ao gestor.
