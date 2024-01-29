@@ -106,5 +106,6 @@ print ("email enviado")
 
 ### Links e Referências
 
-https://pyautogui.readthedocs.io/en/latest/
+* Documentação Oficial [Python-Pyautogui](https://pyautogui.readthedocs.io/en/latest/)
+* Livro Original [Automate the Boring Stuff with Python](https://www.amazon.com.br/Automate-Boring-Stuff-Python-2nd/dp/1593279922/ref=asc_df_1593279922/?tag=googleshopp00-20&linkCode=df0&hvadid=379726160779&hvpos=&hvnetw=g&hvrand=17894222063597453754&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9074180&hvtargid=pla-842272648989&psc=1&mcid=21d65bd15b84302d865dbcc8252b84bc)
 
