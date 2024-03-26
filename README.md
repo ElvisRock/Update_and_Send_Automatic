@@ -1,4 +1,4 @@
-# **Objetivo:** Atualizar a planilha do excel e enviar por email 
+# **Objetivo:** Update the excel spreadsheet and send by email 
 
 _12/04/2021_
 
