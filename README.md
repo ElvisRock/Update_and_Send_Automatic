@@ -1,21 +1,24 @@
-# **Objetivo:** Update the excel spreadsheet and send by email 
+# **Target:** Task automation in Excel and sending via email
 
 _12/04/2021_
 
 ![](Python-Excel.jpeg)
 
-<font color = 'grey'>Descrição do processo e trabalho feito:</font>
+<font color = 'grey'>Description of Process:</font>
  
- - Todos os dias há uma grande demora na execução da criação da planilha do excel e atrasos no envio por email, onde nela contém diversas informações e são consolidadas em formas de relatórios extremamente importante para área de negócio. São geradas através de Macros VBA e entregues ao gestor.
+- Every day, there is a significant delay in the execution of the creation of the Excel spreadsheet and in sending it by email. The spreadsheet contains various pieces of information that are consolidated into reports that are extremely important for the business area. They are generated through VBA Macros and delivered to the manager
+---
  
-  - O problema inicial é que mesmo tendo muitos códigos para gerar esta planilha automática e enviar para o gestor, há um tempo considerável processando tudo e deve ser feita diáriamente, entregue para o gestor no primeiro horário, resultando em uma pessoa ter que chegar mais cedo, todos os dias de 12 á 20 minutos e executar/rodar as macros e enviar para o gestor, se tudo der certo.
+- The first problem is that, even with many codes to generate this automatic spreadsheet and send it to the manager, there is a considerable amount of time spent processing everything, and it has to be done daily and delivered to the manager first thing in the morning. This results in someone having to arrive 15 to 30 minutes earlier every day to run the macros and send the spreadsheet to the manager. If there is an error in loading the data, the process needs to be redone in the macro, causing rework.
+----
   
-  - De forma a resolver o problema primeiro até conseguir passar todos os dados para uma ferramenta mais robusta ideal como o Tableau e Power bi, foi desenvolvido este código para atender a necessidade do gestor e evitar que tenha hora extra.
- 
- - Há códigos em VBA na planilha usada como objeto principal, onde faz diversos processos de atualizações, como puxar dados de outras planilhas e portal CRM via navegador web, portanto neste script não haverá detalhamento desta parte. Somente a execução da macro vba 'click' usando python e envio por email para o gestor.
+- In simple terms, to address the problem until all the data and business rules can be migrated to a more robust and ideal tool such as Tableau or Power BI, this code was developed to meet the manager's needs by generating the report earlier, automatically, and sending it by email. This reduces to zero the overtime required by someone to perform this task manually
+---
+  
+ - There are VBA codes in the spreadsheet used as the main object, which perform various update processes, such as pulling data from other spreadsheets and a CRM portal via a web browser. Therefore, this script will not detail that part. It will only focus on executing the VBA macro 'click' using Python and sending it by email to the manager.
 
- - # Instalações necessárias
- - #### Neste script estou usando o anaconda e ao final é salvo em .py embora o jupyter notebook possua diversos pacotes e bibliotecas incluso é necessário instalar algumas para esta mini-tarefa.
+ - # Required Installations
+ - #### In this script, I am using Anaconda and saving it as a .py file. Although Jupyter Notebook includes various packages and libraries, it is necessary to install some additional ones for this mini-task.
 ```
 !pip install pyautogui    # Para controlar seu pc
 !pip install pywin32      # Para controlar programas no pc como outlook
@@ -62,7 +65,7 @@ time.sleep(5)
 ```
 
 
-# Enviar por email
+# Send by email
 ```
 # Import
 
@@ -94,7 +97,7 @@ email.Attachments.Add(anexo)
 email.Send ()
 print ("email enviado")
 ```
-# Start da Execução
+# Start of Execution
 
     1 - Este Script é feito no Jupiter Notebook e salvo em formato .py. Sistema Operacional usado Windows.
     
@@ -102,10 +105,14 @@ print ("email enviado")
 
     3 - Basta criar uma basta no agendador de tarefas nomeando a tarefa e subindo o script .py.
 
-# Fim
 
-### Links e Referências
+## Conclusion and Considerations
+In order to measure in monetary terms the gain from this small script made in 15 minutes, consider this simple calculation: A professional who arrives approximately ≈30 minutes earlier every day, earning 8k per month and working 22 days. They would earn approximately ≈36.36 reais per hour with 220 hours per month, having approximately ≈0.61 reais per minute. Therefore, the value for 30 minutes is approximately ≈18.18 reais, or about 400 reais per month. Over a year, disregarding all labor-related calculations, the expense would be approximately ≈4,800 reais per year, which would be reduced to zero
 
-* Documentação Oficial: [Python-PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/)
-* Livro Original: [Automate the Boring Stuff with Python](https://www.amazon.com.br/Automate-Boring-Stuff-Python-2nd/dp/1593279922/ref=asc_df_1593279922/?tag=googleshopp00-20&linkCode=df0&hvadid=379726160779&hvpos=&hvnetw=g&hvrand=17894222063597453754&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9074180&hvtargid=pla-842272648989&psc=1&mcid=21d65bd15b84302d865dbcc8252b84bc)
+# End
+
+### Links and References
+
+* Docs: [Python-PyAutoGUI](https://pyautogui.readthedocs.io/en/latest/)
+* Book: [Automate the Boring Stuff with Python](https://www.amazon.com.br/Automate-Boring-Stuff-Python-2nd/dp/1593279922/ref=asc_df_1593279922/?tag=googleshopp00-20&linkCode=df0&hvadid=379726160779&hvpos=&hvnetw=g&hvrand=17894222063597453754&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9074180&hvtargid=pla-842272648989&psc=1&mcid=21d65bd15b84302d865dbcc8252b84bc)
 
