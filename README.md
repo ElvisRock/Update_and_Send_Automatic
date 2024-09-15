@@ -52,7 +52,7 @@ pyautogui.click(210,475, button = 'left', duration = 0.25)
 time.sleep(4)
 
 # Abrir a pasta/planilha excel
-os.startfile(r"C:\Users\elvis.monteiro\Desktop\Teste para envio fora de perfil\Fora do Perfil - Atualização Diária 2021.xlsb")
+os.startfile(r"C:\Users\elvis.monteiro\Desktop\Nome_Pasta\Nome_planilha_excel.xlsb")
 
 pyautogui.PAUSE=6
 
@@ -96,7 +96,7 @@ Elvis M.</p>
 
 """
 #Enviar Anexo
-anexo = r"C:\Users\elvis.monteiro\Desktop\Teste para envio fora de perfil\Fora do Perfil - Atualização Diária 2021.xlsb"
+anexo = r"C:\Users\elvis.monteiro\Desktop\Nome_Pasta\Nome_planilha_excel.xlsb"
 email.Attachments.Add(anexo)
 
 email.Send ()
