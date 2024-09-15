@@ -4,6 +4,11 @@ _12/04/2021_
 
 ![](Python-Excel.jpeg)
 
+[Font Image](https://www.pyxll.com/)
+
+
+
+
 <font color = 'grey'>Description of Process:</font>
  
 - Every day, there is a significant delay in the execution of the creation of the Excel spreadsheet and in sending it by email. The spreadsheet contains various pieces of information that are consolidated into reports that are extremely important for the business area. They are generated through VBA Macros and delivered to the manager
